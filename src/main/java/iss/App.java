@@ -13,20 +13,21 @@ public final class App {
 
         Integer myGuess = 0;
 
-        Scanner input = new Scanner(System.in);
-        while (myGuess != guessNumber) {
-            myGuess = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            while (myGuess != guessNumber) {
+                myGuess = input.nextInt();
 
-            if (myGuess < guessNumber) {
-                System.out.println("The number you guessed is lower.");
-            } else if (myGuess > guessNumber) {
-                System.out.println("The number you guessed is higher.");
-            } else {
-                System.out.println("You got it right!");
-                // to exit the programme
-                System.exit(0); 
+                if (myGuess < guessNumber) {
+                    System.out.println("The number you guessed is lower.");
+                } else if (myGuess > guessNumber) {
+                    System.out.println("The number you guessed is higher.");
+                } else {
+                    System.out.println("You got it right!");
+                    // to exit the programme
+                    System.exit(0); 
+                }
+
             }
-
         }
     }
 }
