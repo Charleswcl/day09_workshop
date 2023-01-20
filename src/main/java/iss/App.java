@@ -23,7 +23,8 @@ public final class App {
                 System.out.println("The number you guessed is higher.");
             } else {
                 System.out.println("You got it right!");
-                // System.exit(0); to exit the programme
+                // to exit the programme
+                System.exit(0); 
             }
 
         }
